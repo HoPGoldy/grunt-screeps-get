@@ -45,7 +45,7 @@ module.exports = function(grunt) {
 
         // 创建文件
         for (const moduleName in data.modules) {
-          fs.writeFile(`${saveDir}/${moduleName}.js`, data.modules[moduleName], err => {
+          fs.writeFileSync(`${saveDir}/${moduleName}.js`, data.modules[moduleName], err => {
             if (err) return console.log('Error with writeFile ', err);
           });
         }
